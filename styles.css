@@ -1,0 +1,453 @@
+/* ================================================
+   Una Vida Buena — Hoja de estilos principal
+   Autor: Campos García Edwin Yair
+   ITSX | Programación Web | 2026
+   ================================================ */
+
+/* ── Selector universal ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Selector de tipo: body ── */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+  font-size: 14px;
+}
+
+/* ── Selector de tipo: header ── */
+header {
+  background: #2e7d32;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── Selector de clase: .header-top ── */
+.header-top {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* ── Selector de clase: .logo ── */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ── Selector de tipo: nav ── */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ── Selector descendente: nav a ── */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* ── Selector de clase: .nav-btn ── */
+.nav-btn {
+  background: #fff;
+  color: #2e7d32;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* ── Selector de clase: .hero ── */
+.hero {
+  background: #388e3c;
+  color: #fff;
+  padding: 40px 30px;
+  position: relative;
+}
+
+/* ── Selector de tipo descendente: .hero h1 ── */
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* ── Selector de tipo descendente: .hero p ── */
+.hero p {
+  font-size: 14px;
+  max-width: 550px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* ── Selector de clase: .hero-btns ── */
+.hero-btns {
+  display: flex;
+  gap: 12px;
+}
+
+/* ── Selector de clase: .btn-verde ── */
+.btn-verde {
+  background: #fff;
+  color: #2e7d32;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ── Selector de clase: .btn-outline ── */
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── Selector de clase: .search-bar ── */
+.search-bar {
+  background: #fff;
+  padding: 14px 30px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ── Selector de elemento hijo: .search-bar input ── */
+.search-bar input {
+  flex: 1;
+  max-width: 480px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+/* ── Selector de elemento hijo: .search-bar button ── */
+.search-bar button {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── Selector de tipo: main ── */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 30px;
+}
+
+/* ── Selector de tipo: h2 ── */
+h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #1b5e20;
+}
+
+/* ── Selector de clase: .cards ── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── Selector de clase: .card ── */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ── Selector de clase: .card-placeholder ── */
+.card-placeholder {
+  height: 100px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+}
+
+/* ── Selector de clase: .card-body ── */
+.card-body {
+  padding: 12px;
+}
+
+/* ── Selector descendente: .card-body h4 ── */
+.card-body h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* ── Selector descendente: .card-body p ── */
+.card-body p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* ── Selector de clase: .card-link ── */
+.card-link {
+  color: #2e7d32;
+  font-size: 12px;
+}
+
+/* ── Selector de clase: .articulos ── */
+.articulos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* ── Selector de clase: .art-principal ── */
+.art-principal {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ── Selector descendente: .art-principal .img-placeholder ── */
+.art-principal .img-placeholder {
+  height: 140px;
+  background: #c8e6c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 12px;
+}
+
+/* ── Selector descendente: .art-principal .art-body ── */
+.art-principal .art-body {
+  padding: 16px;
+}
+
+/* ── Selector descendente: .art-principal h3 ── */
+.art-principal h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* ── Selector descendente: .art-principal p ── */
+.art-principal p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ── Selector de clase: .art-lista ── */
+.art-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Selector de clase: .art-item ── */
+.art-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+/* ── Selector descendente: .art-item h4 ── */
+.art-item h4 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* ── Selector descendente: .art-item p ── */
+.art-item p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ── Selector de clase: .recursos ── */
+.recursos {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+/* ── Selector de clase: .recursos-grid ── */
+.recursos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* ── Selector de clase: .recurso-item ── */
+.recurso-item {
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+/* ── Selector descendente: .recurso-item h5 ── */
+.recurso-item h5 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* ── Selector descendente: .recurso-item p ── */
+.recurso-item p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ── Selector de clase: .contacto ── */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* ── Selector descendente: .contacto-info h2 ── */
+.contacto-info h2 {
+  margin-bottom: 8px;
+}
+
+/* ── Selector descendente: .contacto-info p ── */
+.contacto-info p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ── Selector de clase: .contacto-form ── */
+.contacto-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+/* ── Selector de clase: .form-group ── */
+.form-group {
+  margin-bottom: 12px;
+}
+
+/* ── Selector descendente: .form-group label ── */
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* ── Selector de agrupación: .form-group input, .form-group textarea ── */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  resize: none;
+}
+
+/* ── Selector descendente: .form-group textarea ── */
+.form-group textarea {
+  height: 80px;
+}
+
+/* ── Selector de clase: .form-submit ── */
+.form-submit {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ── Selector de tipo: footer ── */
+footer {
+  background: #1b5e20;
+  color: #fff;
+  padding: 28px 30px 16px;
+}
+
+/* ── Selector de clase: .footer-grid ── */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+/* ── Selector descendente: .footer-col h5 ── */
+.footer-col h5 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+
+/* ── Selector descendente: .footer-col a ── */
+.footer-col a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+/* ── Selector descendente: .footer-col p ── */
+.footer-col p {
+  font-size: 11px;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+/* ── Selector de clase: .footer-bottom ── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 12px;
+  font-size: 11px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ── Selector de tipo: hr ── */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 0 20px;
+}
