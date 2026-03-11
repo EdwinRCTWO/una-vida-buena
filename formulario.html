@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto — Una Vida Buena</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Estilos específicos para la página de formulario */
+    .formulario-hero {
+      background: #388e3c;
+      color: #fff;
+      padding: 30px 40px;
+      text-align: center;
+    }
+    .formulario-hero h1 { font-size: 28px; margin-bottom: 8px; }
+    .formulario-hero p  { font-size: 14px; opacity: 0.9; }
+
+    .formulario-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 30px 60px;
+    }
+
+    /* Tarjeta que envuelve el formulario */
+    .form-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 36px 40px;
+    }
+
+    .form-card h2 {
+      font-size: 18px;
+      color: #1b5e20;
+      margin-bottom: 22px;
+    }
+
+    /* Grupo de campo: etiqueta + input */
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    /* Estilos base para inputs, select y textarea */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      transition: border-color 0.2s;
+    }
+
+    /* Resalta el campo activo */
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #2e7d32;
+      outline: none;
+      background: #fff;
+    }
+
+    .form-group textarea { height: 110px; resize: vertical; }
+
+    /* Fila de dos columnas para campos cortos */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* Botón de envío */
+    .btn-enviar {
+      background: #2e7d32;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 6px;
+    }
+    .btn-enviar:hover { background: #1b5e20; }
+
+    /* Nota de campos obligatorios */
+    .form-nota {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       ENCABEZADO DEL SITIO
+       Reutilizado del proyecto principal
+  =========================================== -->
+  <header>
+    <div class="logo">Una Vida Buena</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="index.html#secciones">Alimentación</a>
+      <a href="index.html#secciones">Sueño</a>
+      <a href="index.html#secciones">Actividad Física</a>
+      <a href="index.html#secciones">Salud Mental</a>
+      <a href="index.html#recursos">Recursos</a>
+      <a href="formulario.html" class="nav-btn">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       SECCIÓN HERO DEL FORMULARIO
+       Presenta la página de contacto
+  =========================================== -->
+  <div class="formulario-hero">
+    <h1>Contacto</h1>
+    <p>¿Tienes dudas, sugerencias o comentarios? Escríbenos.</p>
+  </div>
+
+  <!-- ==========================================
+       CONTENEDOR PRINCIPAL DEL FORMULARIO
+  =========================================== -->
+  <div class="formulario-container">
+    <div class="form-card">
+
+      <h2>Envíanos un mensaje</h2>
+      <p class="form-nota">Los campos marcados con * son obligatorios.</p>
+
+      <!-- ==========================================
+           ELEMENTO <form>
+           action: a dónde se envían los datos
+           method: método de envío (POST = seguro)
+      =========================================== -->
+      <form action="#" method="POST">
+
+        <!-- Fila con dos campos cortos lado a lado -->
+        <div class="form-row">
+
+          <!-- CAMPO TEXTO: nombre -->
+          <!-- <input type="text"> recibe texto libre del usuario -->
+          <div class="form-group">
+            <label for="nombre">Nombre *</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: Juan Pérez"
+              required
+            />
+            <!-- required: el campo no puede enviarse vacío -->
+          </div>
+
+          <!-- CAMPO TEXTO: apellido -->
+          <div class="form-group">
+            <label for="apellido">Apellido *</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              placeholder="Ej: García"
+              required
+            />
+          </div>
+
+        </div><!-- fin .form-row -->
+
+        <!-- CAMPO EMAIL: correo electrónico -->
+        <!-- <input type="email"> valida automáticamente el formato de correo -->
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ejemplo@correo.com"
+            required
+          />
+        </div>
+
+        <!-- CAMPO TEL: número de teléfono -->
+        <!-- <input type="tel"> muestra teclado numérico en dispositivos móviles -->
+        <div class="form-group">
+          <label for="telefono">Teléfono (opcional)</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="Ej: 2281234567"
+          />
+        </div>
+
+        <!-- CAMPO NUMBER: edad -->
+        <!-- <input type="number"> restringe la entrada a valores numéricos -->
+        <div class="form-group">
+          <label for="edad">Edad *</label>
+          <input
+            type="number"
+            id="edad"
+            name="edad"
+            placeholder="Ej: 23"
+            min="10"
+            max="99"
+            required
+          />
+        </div>
+
+        <!-- CAMPO SELECT: tema de interés -->
+        <!-- <select> permite elegir una opción de una lista desplegable -->
+        <div class="form-group">
+          <label for="tema">Tema de interés *</label>
+          <select id="tema" name="tema" required>
+            <option value="" disabled selected>Selecciona un tema</option>
+            <option value="alimentacion">Alimentación</option>
+            <option value="sueno">Sueño</option>
+            <option value="actividad">Actividad Física</option>
+            <option value="mental">Salud Mental</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <!-- CAMPO DATE: fecha de consulta -->
+        <!-- <input type="date"> muestra un selector de calendario -->
+        <div class="form-group">
+          <label for="fecha">¿Cuándo deseas que te contactemos?</label>
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+          />
+        </div>
+
+        <!-- CAMPO TEXTAREA: mensaje largo -->
+        <!-- <textarea> permite escribir texto de múltiples líneas -->
+        <div class="form-group">
+          <label for="mensaje">Mensaje *</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe tu comentario, pregunta o sugerencia aquí…"
+            required
+          ></textarea>
+        </div>
+
+        <!-- BOTÓN DE ENVÍO -->
+        <!-- <button type="submit"> envía los datos del formulario -->
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+      </form><!-- fin <form> -->
+
+    </div><!-- fin .form-card -->
+  </div><!-- fin .formulario-container -->
+
+  <!-- ==========================================
+       PIE DE PÁGINA
+       Reutilizado del proyecto principal
+  =========================================== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h5>Una Vida Buena</h5>
+        <p>Guía práctica para una vida sana. Contenido informativo para jóvenes adultos.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Secciones</h5>
+        <a href="#">Alimentación</a>
+        <a href="#">Sueño</a>
+        <a href="#">Actividad Física</a>
+        <a href="#">Salud Mental</a>
+      </div>
+      <div class="footer-col">
+        <h5>Recursos</h5>
+        <a href="#">PDFs</a>
+        <a href="#">Bibliografía</a>
+        <a href="#">Enlaces externos</a>
+      </div>
+      <div class="footer-col">
+        <h5>Sitio</h5>
+        <a href="index.html">Inicio</a>
+        <a href="formulario.html">Contacto</a>
+        <a href="#">GitHub Pages</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 — Edwin Campos García | ITSX | Programación Web</span>
+      <span>Hospedado en GitHub Pages</span>
+    </div>
+  </footer>
+
+</body>
+</html>
