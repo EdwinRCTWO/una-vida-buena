@@ -1,0 +1,512 @@
+/* ================================================
+   Una Vida Buena — Hoja de estilos principal
+   Autor: Campos García Edwin Yair
+   ITSX | Programación Web | 2026
+   ================================================ */
+
+/* ── BOX MODEL: reset universal ──────────────────
+   box-sizing: border-box hace que el padding y el
+   border queden DENTRO del ancho/alto declarado,
+   evitando desbordamientos inesperados.
+   margin: 0 y padding: 0 eliminan los espacios
+   predeterminados del navegador en todos los elementos.
+   ─────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Selector de tipo: body ── */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+  font-size: 14px;
+}
+
+/* ── BOX MODEL: header ────────────────────────────
+   padding: espacio interno entre el borde del header
+            y su contenido (logo + nav).
+   El header ocupa el 100% del ancho (width implícito
+   de bloque) y su altura la define el padding.
+   ─────────────────────────────────────────────── */
+header {
+  background: #2e7d32;
+  padding: 12px 30px;       /* padding-top/bottom: 12px | padding-left/right: 30px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.header-top {
+  width: 100%;              /* width: controla el ancho del elemento */
+  margin-bottom: 4px;       /* margin-bottom: separa este div del logo debajo */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ── Selector de tipo: nav ── */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* ── BOX MODEL: .nav-btn ──────────────────────────
+   padding: crea el espacio interno del botón,
+            dándole tamaño visual sin necesidad de
+            declarar width/height fijos.
+   border-radius: afecta la apariencia del border.
+   ─────────────────────────────────────────────── */
+.nav-btn {
+  background: #fff;
+  color: #2e7d32;
+  padding: 6px 14px;        /* padding interno: 6px arriba/abajo, 14px izq/der */
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* ── BOX MODEL: .hero ─────────────────────────────
+   padding: define el espacio interior de la sección
+            hero, separando el texto del borde del
+            contenedor.
+   position: relative permite posicionar elementos
+             hijos con position: absolute dentro.
+   ─────────────────────────────────────────────── */
+.hero {
+  background: #388e3c;
+  color: #fff;
+  padding: 40px 30px;       /* padding amplio para dar "aire" al contenido */
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;      /* margin-bottom: separa el título del párrafo */
+}
+
+.hero p {
+  font-size: 14px;
+  max-width: 550px;         /* max-width: limita el ancho del content */
+  line-height: 1.6;
+  margin-bottom: 20px;      /* margin-bottom: separa el párrafo de los botones */
+  opacity: 0.9;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+}
+
+/* ── BOX MODEL: botones de acción ─────────────────
+   padding: da cuerpo al botón sin width fijo.
+   border: define el contorno visible del botón,
+           parte del modelo de caja.
+   ─────────────────────────────────────────────── */
+.btn-verde {
+  background: #fff;
+  color: #2e7d32;
+  padding: 10px 22px;       /* content + padding = tamaño visual del botón */
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;   /* border visible: ocupa espacio en el modelo de caja */
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── BOX MODEL: .search-bar ──────────────────────
+   padding: espacio interno entre el borde y los
+            campos de búsqueda.
+   border-bottom: borde inferior como separador
+                  visual de sección.
+   ─────────────────────────────────────────────── */
+.search-bar {
+  background: #fff;
+  padding: 14px 30px;       /* padding vertical y horizontal */
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;  /* border-bottom: solo borde inferior */
+}
+
+.search-bar input {
+  flex: 1;
+  max-width: 480px;         /* max-width controla el tamaño máximo del content */
+  border: 1px solid #ccc;   /* border: contorno del campo */
+  border-radius: 4px;
+  padding: 8px 12px;        /* padding interno del input */
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+
+.search-bar button {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── BOX MODEL: main ──────────────────────────────
+   max-width: limita el ancho del área de contenido.
+   margin: 0 auto centra horizontalmente el contenedor
+           usando márgenes automáticos iguales.
+   padding: separa el contenido de los bordes del main.
+   ─────────────────────────────────────────────── */
+main {
+  max-width: 1200px;        /* max-width: ancho máximo del content */
+  margin: 0 auto;           /* margin auto: centra el bloque horizontalmente */
+  padding: 24px 30px;       /* padding: espacio interior */
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 14px;      /* margin-bottom: separa el título de lo que sigue */
+  color: #1b5e20;
+}
+
+/* ── BOX MODEL: .cards (contenedor de tarjetas) ───
+   gap: espacio entre las tarjetas (equivale a
+        márgenes entre elementos del grid).
+   margin-bottom: margen inferior que separa esta
+                  sección de la siguiente.
+   ─────────────────────────────────────────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;                /* gap: espacio entre columnas del grid */
+  margin-bottom: 24px;      /* margin-bottom: margen exterior inferior */
+}
+
+/* ── BOX MODEL: .card ─────────────────────────────
+   border: 1px solid → contorno visible de la tarjeta.
+   border-radius: redondea las esquinas del border.
+   overflow: hidden → el contenido no desborda el
+             borde redondeado de la tarjeta.
+   El tamaño final de la tarjeta es:
+   content + padding (en .card-body) + border
+   ─────────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;   /* border: contorno de la tarjeta */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-placeholder {
+  height: 100px;            /* height: altura fija del área de imagen */
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+}
+
+/* ── BOX MODEL: .card-body ────────────────────────
+   padding: espacio entre el borde de la tarjeta y
+            el texto interior (título, párrafo, enlace).
+   ─────────────────────────────────────────────── */
+.card-body {
+  padding: 12px;            /* padding: espacio interno del cuerpo de la tarjeta */
+}
+
+.card-body h4 {
+  font-size: 14px;
+  margin-bottom: 6px;       /* margin-bottom: separa título del párrafo */
+}
+
+.card-body p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;       /* margin-bottom: separa el párrafo del enlace */
+}
+
+.card-link {
+  color: #2e7d32;
+  font-size: 12px;
+}
+
+/* ── BOX MODEL: sección de artículos ─────────────
+   gap: espacio entre el artículo principal y la lista.
+   margin-bottom: margen inferior de la sección.
+   ─────────────────────────────────────────────── */
+.articulos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.art-principal {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.art-principal .img-placeholder {
+  height: 140px;
+  background: #c8e6c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 12px;
+}
+
+.art-principal .art-body {
+  padding: 16px;            /* padding: espacio interior del cuerpo del artículo */
+}
+
+.art-principal h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.art-principal p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.art-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                /* gap: espacio entre artículos secundarios */
+}
+
+/* ── BOX MODEL: .art-item ─────────────────────────
+   padding: espacio interior de cada artículo secundario.
+   border: contorno visible del elemento.
+   border-radius: esquinas redondeadas del border.
+   ─────────────────────────────────────────────── */
+.art-item {
+  background: #fff;
+  border: 1px solid #ddd;   /* border: contorno del artículo */
+  border-radius: 6px;
+  padding: 12px;            /* padding: espacio interior */
+}
+
+.art-item h4 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.art-item p {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ── BOX MODEL: .recursos ─────────────────────────
+   padding: espacio interior del contenedor de recursos.
+   border: contorno del bloque.
+   margin-bottom: margen que lo separa de la sección
+                  de contacto.
+   ─────────────────────────────────────────────── */
+.recursos {
+  background: #fff;
+  border: 1px solid #ddd;   /* border: contorno de la sección */
+  border-radius: 6px;
+  padding: 20px;            /* padding: espacio interior */
+  margin-bottom: 24px;      /* margin-bottom: margen exterior inferior */
+}
+
+.recursos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* ── BOX MODEL: .recurso-item ─────────────────────
+   border: borde punteado que enmarca cada recurso.
+   padding: espacio interior del elemento.
+   ─────────────────────────────────────────────── */
+.recurso-item {
+  border: 1px dashed #bbb;  /* border dashed: borde punteado como contorno */
+  border-radius: 6px;
+  padding: 12px;            /* padding: espacio interior */
+}
+
+.recurso-item h5 {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.recurso-item p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ── BOX MODEL: .contacto ─────────────────────────
+   gap: espacio entre la columna de info y el formulario.
+   margin-bottom: margen inferior de la sección.
+   ─────────────────────────────────────────────── */
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.contacto-info h2 {
+  margin-bottom: 8px;
+}
+
+.contacto-info p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ── BOX MODEL: .contacto-form ────────────────────
+   padding: espacio interior del contenedor del form.
+   border: contorno visible de la tarjeta del formulario.
+   ─────────────────────────────────────────────── */
+.contacto-form {
+  background: #fff;
+  border: 1px solid #ddd;   /* border: contorno de la tarjeta */
+  border-radius: 6px;
+  padding: 20px;            /* padding: espacio interior */
+}
+
+/* ── BOX MODEL: .form-group ───────────────────────
+   margin-bottom: margen entre cada campo del formulario,
+                  creando separación visual entre ellos.
+   ─────────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 12px;      /* margin-bottom: separa cada grupo label+input */
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;       /* margin-bottom: separa la etiqueta del campo */
+}
+
+/* ── BOX MODEL: inputs y textarea ─────────────────
+   width: 100% → el campo ocupa todo el ancho del
+          contenedor padre (.form-group).
+   padding: espacio interior entre el texto y el borde
+            del campo de entrada.
+   border: contorno del campo.
+   ─────────────────────────────────────────────── */
+.form-group input,
+.form-group textarea {
+  width: 100%;              /* width: ancho completo del content */
+  border: 1px solid #ccc;   /* border: contorno del campo */
+  border-radius: 4px;
+  padding: 8px 10px;        /* padding: espacio interior del campo */
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  resize: none;
+}
+
+.form-group textarea {
+  height: 80px;             /* height: altura fija del área de texto */
+}
+
+/* ── BOX MODEL: .form-submit ──────────────────────
+   width: 100% → el botón ocupa todo el ancho disponible.
+   padding: da altura y espacio interno al botón.
+   border: none → sin contorno visible.
+   ─────────────────────────────────────────────── */
+.form-submit {
+  background: #2e7d32;
+  color: #fff;
+  border: none;             /* border: none → sin borde visible */
+  padding: 10px 20px;       /* padding: espacio interior del botón */
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;              /* width: ancho completo */
+}
+
+/* ── BOX MODEL: footer ────────────────────────────
+   padding: espacio interior del pie de página,
+            separando el contenido de los bordes.
+   ─────────────────────────────────────────────── */
+footer {
+  background: #1b5e20;
+  color: #fff;
+  padding: 28px 30px 16px;  /* padding: top 28px | right/left 30px | bottom 16px */
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 24px;                /* gap: espacio entre columnas del footer */
+  margin-bottom: 16px;      /* margin-bottom: separa el grid de la línea inferior */
+}
+
+.footer-col h5 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+
+.footer-col a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 4px;       /* margin-bottom: separa cada enlace del siguiente */
+}
+
+.footer-col p {
+  font-size: 11px;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+/* ── BOX MODEL: .footer-bottom ────────────────────
+   border-top: borde superior como separador visual,
+               forma parte del modelo de caja del elemento.
+   padding-top: espacio entre el borde y el texto.
+   ─────────────────────────────────────────────── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* border-top: separador */
+  padding-top: 12px;        /* padding-top: espacio sobre el texto */
+  font-size: 11px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ── Selector de tipo: hr ── */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 0 20px;         /* margin-bottom: separa el hr del siguiente bloque */
+}
