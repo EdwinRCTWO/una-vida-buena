@@ -510,3 +510,18 @@ hr {
   border-top: 1px solid #ddd;
   margin: 0 0 20px;         /* margin-bottom: separa el hr del siguiente bloque */
 }
+
+/* ===============================
+   ANIMACIONES SCROLL
+   =============================== */
+
+.oculto {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
